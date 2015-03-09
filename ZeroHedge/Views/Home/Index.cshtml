@@ -16,8 +16,7 @@
         <div class="navbar-collapse collapse">
           
           <ul class="nav navbar-nav">
-              
-              <!--@Html.Raw( "<li>" + @Html.ActionLink( "Zero Hedge", "~/Home/Index/", new { id=-1 }) + "</li>" )-->
+              @*@Html.Raw( "<li>" + @Html.ActionLink( "Zero Hedge", "~/Home/Index/", new { id=-1 }) + "</li>" )*@
               
               @{
                 
@@ -50,7 +49,7 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title">
                                     @{
-                                        <!--string sID = "/ZeroHedge/Home/Story/" + @Convert.ToString(@item.ID);-->
+                                        @*string sID = "/ZeroHedge/Home/Story/" + @Convert.ToString(@item.ID);*@
                                         string sID = "/Home/Story/" + @Convert.ToString(@item.ID); 
                                     }
                                     <a href=@sID>@Html.Raw(@item.Title)</a>

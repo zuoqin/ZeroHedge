@@ -1,0 +1,54 @@
+﻿@{
+    if (String.IsNullOrEmpty (@ViewBag.Title))
+    {
+        ViewBag.Title = "News";
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+        @ViewBag.Title - Zero Hedge</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- Bootstrap core CSS -->
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet">
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+                @RenderBody()
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/docs.min.js"></script>
+    <script src="~/Scripts/knockout-3.1.0.js"></script>
+    <script src="~/Scripts/prettify.js"></script>
+    <script src="~/Scripts/knockout-bootstrap.min.js"></script>
+  
+<script>
+    var ExampleViewModel = function () {
+
+        function backPage() {
+            history.go(-1);
+        }
+
+
+        return {
+            backPage: backPage
+        };
+    };
+
+    $(function () {
+        // make code pretty
+        window.prettyPrint && prettyPrint();
+
+        var viewModel = new ExampleViewModel();
+
+        ko.applyBindings(viewModel);
+    });
+
+</script>    
+    </body>
+</html>
